@@ -1,0 +1,68 @@
+<div id="wifiSet">
+	<div class="setsCell">
+		<div class="setsCellTitle">WIFI类型：</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<select id="ucFD_WorkMode">
+					<option value="0">USBWifi</option>
+					<option value="1">Client</option>
+					<option value="2">AP</option>
+					<option value="3">AP+Client</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle">S&nbsp;S&nbsp;I&nbsp;D：</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<input id="strFD_SSID" class="fullIpt">
+			</div>
+		</div>
+	</div>
+	<div class="setsCell" id="wifiSetPsw" style="display: none;">
+		<div class="setsCellTitle">密&nbsp;&nbsp;&nbsp;码：</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<input id="strFD_Passwd" class="fullIpt">
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle">认证类型：</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<select id="ucFD_AuthMode">
+					<option value="100">OPEN</option>
+					<option value="0">WEP</option>
+					<option value="1">WPA-PSK</option>
+					<option value="2">WPA2-PSK</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="setsCell" id="wifiSetPswType" style="display: none;">
+		<div class="setsCellTitle">加密类型：</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<select id="ucFD_CryptType">
+					<option value="0"></option>
+					<option value="1"></option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle">D&nbsp;H&nbsp;C&nbsp;P：</div>
+		<div class="setsCellCont">
+			<input id="dhcp" type="checkbox" class="adSelect0">
+			<label for="dhcp" class="adSelect" onclick="$(this).find('div').toggleClass('active')">
+				<div id="ucFD_DhcpEnableFlag"></div>
+			</label>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div id="WifiInfo-ok" class="setsCell-btn">保存</div>
+		<div id="WifiInfo-cancel" class="setsCell-btn">取消</div>
+	</div>
+</div>

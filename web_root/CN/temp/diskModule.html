@@ -1,0 +1,22 @@
+
+<div id="wifiSet">
+<% for (var i = 0 ; i < list.length ; i++) {%>
+	<div class="setsCell">
+		<div class="setsCellTitle" style="font-size:12px">磁盘<%= (i+1) %>：</div>
+		<div class="setsCellCont ">
+			<div class="ipt sys-iptbox" style="font-size:12px">
+				<%= list[i].ucFD_DiskExist %>
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle" style="font-size:12px">磁盘<%= (i+1) %>大小：</div>
+		<div class="setsCellCont ">
+			<div class="ipt sys-iptbox" style="font-size:12px">
+				<%= list[i].strFD_DiskSize %>
+			</div>
+		</div>
+	</div>
+<%}%>
+	
+</div>

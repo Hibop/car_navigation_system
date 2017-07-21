@@ -1,0 +1,58 @@
+<div id="baseSet" class="baseSet">
+	<div class="setsCell">
+		<div class="setsCellTitle">Device No</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<input id="strFD_DeviceNo" class="fullIpt">
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle">Auto Adjust</div>
+		<div class="setsCellCont">
+			<input id="ucFD_TZAdjust" type="checkbox" class="adSelect0">
+			<label for="ucFD_TZAdjust" class="adSelect" onclick="$(this).find('div').toggleClass('active')">
+				<div id="ucFD_GpsSTFlag"></div>
+			</label>
+		</div>
+	</div>
+	
+	<div class="setsCell">
+		<div class="setsCellTitle" style=";text-align:justify;text-justify:inter-ideograph">Date:</div>
+		<div class="setsCellCont">
+			<div class="ipt">
+				<input id="strFD_CurTime1" class="timeIpt" type="date">
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle" style=";text-align:justify;text-justify:inter-ideograph">Time:</div>
+		<div class="setsCellCont">
+			<div class="ipt">
+				<input id="strFD_CurTime2" class="timeIpt" type="time">
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle">Time Zone:</div>
+		<div class="setsCellCont">
+			<div class="ipt">
+				<select id="ucFD_TimeZone">
+					<% for (var i = 0 ; i < 24 ; i++) {%>
+						<%if(i>12){%>
+							<option value="<%= i %>">UTC +<%=i-12%></option>
+						<%}else if(i==12){%>
+							<option value="<%= i %>">UTC</option>
+						<%}else{%>
+							<option value="<%= i %>">UTC <%=i-12%></option>
+						<%}%>
+					<%}%>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div id="baseInfo-ok" class="setsCell-btn">Save</div>
+		<div id="baseInfo-cancel" class="setsCell-btn">Cancel</div>
+	</div>
+</div>

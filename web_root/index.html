@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/page.css">
+	<script type="text/javascript" src="./CN/js/vendor/jquery.js"></script>
+</head>
+<style type="text/css">
+html, body, div {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei";
+}
+
+</style>
+<script type="text/javascript">
+	
+	(function ($) {
+		//alert($(".title"));
+		var lang = 'CN';
+		$.ajax({
+			url : "/get_LangInfo",
+			dataType:"JSON",
+			success:function(obj){
+				//console.log(obj);
+				//var obj1 = JSON.parse(obj);
+				lang = obj.strLanguage || 'CN';
+				window.location.href= './'+lang+'/index.html';
+			}
+
+		})
+		//window.location.href= './'+lang+'/index.html';
+	})(jQuery)
+	
+</script>
+<body>
+	<div class="nav">
+		<div class="title"><span id="pageTitle"><!-- 语言设置-Language Set --></span></div>
+	</div>
+
+		
+</body>
+</html>
