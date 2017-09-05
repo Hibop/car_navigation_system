@@ -9,15 +9,15 @@
 +---doc
 +---server
 \---web_root
-    +---CN
-    |   +---css
-    |   +---js
+    +---CN  中文目录
+    |   +---css   样式文件
+    |   +---js   Backbone.view
     |   |   +---index
     |   |   +---setList
     |   |   +---systemInfo
-    |   |   \---vendor
-    |   \---temp
-    +---EN
+    |   |   \---vendor  存放公共依赖库
+    |   \---temp    存放模板文件
+    +---EN  英文目录
     |   +---css
     |   +---js
     |   |   +---index
