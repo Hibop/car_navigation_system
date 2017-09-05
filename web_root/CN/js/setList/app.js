@@ -2,11 +2,13 @@ define(['jquery','underscore','config',
 	"text!../../temp/list.html",
 	"text!../../temp/baseInfo.html",
 	"text!../../temp/mirrorInfo.html",
+	"text!../../temp/encodeInfo.html",
+	"text!../../temp/gb28181Info.html",
 	"text!../../temp/VCmsInfo.html",
 	"text!../../temp/WifiInfo.html",
 	"text!../../temp/GNetInfo.html"
 
-	], function( $, _, CONFIG, listTemp, baseInfoTemp, mirrorInfoTemp,VCmsInfoTemp,WifiInfoTemp,GNetInfoTemp){
+	], function( $, _, CONFIG, listTemp, baseInfoTemp, mirrorInfoTemp, encodeInfoTemp, gb28181InfoTemp, VCmsInfoTemp,WifiInfoTemp,GNetInfoTemp){
     return {
 		init : function  () {
 			
@@ -23,6 +25,8 @@ define(['jquery','underscore','config',
 			
 			self.initBaseInfo();
 			self.initMirrorInfo();
+			self.initEnodeInfo();
+			self.initGb28181Info();
 
 			self.initVCmsInfo();
 			self.initWifiInfo();
@@ -34,6 +38,16 @@ define(['jquery','underscore','config',
 			var self = this;
 			var html = _.template(listTemp)(setter);
 			$("#setList").append(html);
+		},
+		initEnodeInfo:function(){
+			var self = this;
+			var html = _.template(encodeInfoTemp)();
+			$("#encodeInfoBox").html(html);
+		},
+		initGb28181Info:function(){
+			var self = this;
+			var html = _.template(gb28181InfoTemp)();
+			$("#gb28181InfoBox").append(html);
 		},
 		bind : function  () {
 			var self = this;

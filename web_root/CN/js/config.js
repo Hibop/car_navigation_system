@@ -20,6 +20,14 @@ define(function(){
 				name : "mirrorInfo",
 				title : "镜像设置",
 				url : "MirrorInfo"	// postURL
+			},{
+				name: "encodeInfo",
+				title: "编码设置",
+				url: ""
+			},{
+				name: "gb28181Info",
+				title: "GB28181设置",
+				url: ""
 			}]
 		},{	
 			id : "1",

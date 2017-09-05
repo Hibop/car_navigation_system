@@ -1,0 +1,107 @@
+<div id="encodeSet" class="baseSet">
+	<div class="setsCell">
+		<div class="setsCellTitle">通道选择：</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<select id="ucFD_WorkMode">
+					<% for (var i = 0 ; i < 4 ; i++) {%>
+					<option value="<%= i+1 %>"><%= i+1 %></option>
+					<% }%>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle">分辨率：</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<select id="ucFD_WorkMode">
+					<option value="1080P">1080P</option>
+					<option value="720P">720P</option>
+					<option value="D1">D1</option>
+					<option value="CIF">CIF</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle">帧率：</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<input class="fullIpt" type="number" max="25" min="0" step="1"/>
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle">码率：</div>
+		<div class="setsCellCont ">
+			<div class="ipt">
+				<select id="ucFD_WorkMode">
+					<% for (var i = 0 ; i < 5 ; i++) {%>
+					<option value="<%= 1024*(i+1) %>"><%= 1024*(i+1) %></option>
+					<% }%>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="setsCell">
+		<div class="setsCell-sub">
+			<div class="setsCellTitle">音频：</div>
+			<div class="setsCellCont">
+				<input id="ucFD_TZAdjust" type="checkbox" class="adSelect0">
+				<label for="ucFD_TZAdjust" class="adSelect" onclick="$(this).find('div').toggleClass('active')">
+					<div id="ucFD_GpsSTFlag"></div>
+				</label>
+			</div>
+		</div>
+		<div class="setsCell-sub">
+			<div class="setsCellTitle">视频：</div>
+			<div class="setsCellCont">
+				<input id="ucFD_TZAdjust" type="checkbox" class="adSelect0">
+				<label for="ucFD_TZAdjust" class="adSelect" onclick="$(this).find('div').toggleClass('active')">
+					<div id="ucFD_GpsSTFlag"></div>
+				</label>
+			</div>
+		</div>
+	</div>
+	
+	<!-- <div class="setsCell">
+		<div class="setsCellTitle" style=";text-align:justify;text-justify:inter-ideograph">日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期：</div>
+		<div class="setsCellCont">
+			<div class="ipt">
+				<input id="strFD_CurTime1" class="timeIpt" type="date">
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle" style=";text-align:justify;text-justify:inter-ideograph">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：</div>
+		<div class="setsCellCont">
+			<div class="ipt">
+				<input id="strFD_CurTime2" class="timeIpt" type="time">
+			</div>
+		</div>
+	</div>
+	<div class="setsCell">
+		<div class="setsCellTitle">时区设定：</div>
+		<div class="setsCellCont">
+			<div class="ipt">
+				<select id="ucFD_TimeZone">
+					<% for (var i = 0 ; i < 24 ; i++) {%>
+						<%if(i>12){%>
+							<option value="<%= i %>">UTC +<%=i-12%></option>
+						<%}else if(i==12){%>
+							<option value="<%= i %>">UTC</option>
+						<%}else{%>
+							<option value="<%= i %>">UTC <%=i-12%></option>
+						<%}%>
+					<%}%>
+				</select>
+			</div>
+		</div>
+	</div> -->
+	<div class="setsCell">
+		<div id="baseInfo-ok" class="setsCell-btn">保存</div>
+		<div id="baseInfo-cancel" class="setsCell-btn">取消</div>
+	</div>
+</div>

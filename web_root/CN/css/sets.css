@@ -4,6 +4,10 @@
 	height: 50px;
 	overflow: hidden;
 }
+.setsCell-sub {
+	width: 50%;
+	float: left;
+}
 .setsCellTitle{
 	width: 31%;
 	line-height: 50px;
